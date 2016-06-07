@@ -35,6 +35,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{ED8079DD
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SegaAFSLib.Tests", "tests\SegaAFSTools.Tests\SegaAFSLib.Tests.fsproj", "{426FBE60-38DD-42B9-BA77-45B9DBDBA022}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "AFSTool", "src\AFSTool\AFSTool.fsproj", "{8144CF10-14BF-4C3D-9AC6-B49C1F760DC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLine", "paket-files\gsscoder\commandline\src\CommandLine\CommandLine.csproj", "{E1BD3C65-49C3-49E7-BABA-C60980CB3F20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,14 @@ Global
 		{426FBE60-38DD-42B9-BA77-45B9DBDBA022}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{426FBE60-38DD-42B9-BA77-45B9DBDBA022}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{426FBE60-38DD-42B9-BA77-45B9DBDBA022}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8144CF10-14BF-4C3D-9AC6-B49C1F760DC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8144CF10-14BF-4C3D-9AC6-B49C1F760DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8144CF10-14BF-4C3D-9AC6-B49C1F760DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8144CF10-14BF-4C3D-9AC6-B49C1F760DC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1BD3C65-49C3-49E7-BABA-C60980CB3F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1BD3C65-49C3-49E7-BABA-C60980CB3F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1BD3C65-49C3-49E7-BABA-C60980CB3F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1BD3C65-49C3-49E7-BABA-C60980CB3F20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
