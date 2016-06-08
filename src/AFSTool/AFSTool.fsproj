@@ -25,7 +25,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DocumentationFile>.\bin\Debug\AFSTool.XML</DocumentationFile>
     <Prefer32Bit>true</Prefer32Bit>
-    <StartArguments>extract --archive-path="C:\Program Files (x86)\Steam\steamapps\common\Space Channel 5 Part 2" --destination-path="c:\SpaceChannel5Extract" --recurse</StartArguments>
+    <StartArguments>examine-dgcp --path="C:\Program Files (x86)\Steam\steamapps\common\Space Channel 5 Part 2\coscap_e.bin" --encoding="ASCII"</StartArguments>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>

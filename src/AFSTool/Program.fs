@@ -3,9 +3,11 @@
 module AFSTool
 
 open AFS
+open DGCP
 open CommandLine
 open System
 open System.IO
+open System.Text
 
 [<CommandLine.Verb("examine", HelpText = "Examine AFS archives and dump information about them")>]
 type ExamineConfiguration() = 
@@ -35,6 +37,35 @@ type ExamineConfiguration() =
       )
     >]
     member val Recurse = false with get, set
+
+[<CommandLine.Verb("examine-dgcp", HelpText = "Examine a DGDCP file and dump information about it")>]
+type ExamineDGCPConfiguration() = 
+    [<
+      CommandLine.Option(
+        "path",
+        Required = true,
+        HelpText = "The path of the DGCP file to examine"
+      )
+    >]
+    member val Path = "" with get, set
+
+    [<
+      CommandLine.Option(
+        "destination-path",
+        Required = false,
+        HelpText = "The path to which the output will be dumped. If not specified, output will be written to the screen."
+      )
+    >]
+    member val DestinationPath = "" with get, set
+
+    [<
+      CommandLine.Option(
+        "encoding",
+        Required = true,
+        HelpText = "The name of the string encoding to use for the DGCP file."
+      )
+    >]
+    member val Encoding = "" with get, set
 
 /// <summary>
 /// Configuration options for archive extraction
@@ -140,6 +171,19 @@ let private runExamine(c: ExamineConfiguration) =
     archives
     |> Array.iter(examineSingleArchive(outputWriter))
 
+let private runExamineDGCP(c: ExamineDGCPConfiguration) = 
+    let outputWriter = 
+        if (String.IsNullOrWhiteSpace(c.DestinationPath)) then
+            System.Console.Out
+        else
+            new StreamWriter(c.DestinationPath) :> TextWriter
+
+    let encoding = Encoding.GetEncoding(c.Encoding)
+    let dgcp = new DGCPFile(c.Path, encoding)
+
+    dgcp.Entries
+    |> Seq.iter(outputWriter.WriteLine)
+
 [<EntryPoint>]
 let main argv = 
     let commandLineParserSetupAction(t: CommandLine.ParserSettings) = 
@@ -149,9 +193,10 @@ let main argv =
 
     let commandLineParser = new CommandLine.Parser(new Action<CommandLine.ParserSettings>(commandLineParserSetupAction))
     commandLineParser
-        .ParseArguments<ExtractConfiguration, ExamineConfiguration>(argv)
+        .ParseArguments<ExtractConfiguration, ExamineConfiguration, ExamineDGCPConfiguration>(argv)
         .WithParsed<ExtractConfiguration>(new Action<ExtractConfiguration>(runExtract))
         .WithParsed<ExamineConfiguration>(new Action<ExamineConfiguration>(runExamine))
+        .WithParsed<ExamineDGCPConfiguration>(new Action<ExamineDGCPConfiguration>(runExamineDGCP))
     |> ignore
 
     0 // return an integer exit code
