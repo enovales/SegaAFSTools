@@ -1,7 +1,8 @@
 source https://nuget.org/api/v2
 
 nuget FSharp.Core redirects: force
-github gsscoder/commandline
+
+git https://github.com/gsscoder/commandline.git master build: "build.cmd", OS: windows
 
 group Build
   source https://nuget.org/api/v2

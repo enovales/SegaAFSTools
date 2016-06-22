@@ -5,7 +5,7 @@
 
 (**
 SegaAFSTools
-======================
+============
 
 Documentation
 
@@ -20,28 +20,10 @@ Documentation
   <div class="span1"></div>
 </div>
 
-Example
--------
-
-This example demonstrates using a function defined in this sample library.
-
-*)
-#r "SegaAFSTools.dll"
-open SegaAFSTools
-
-printfn "hello = %i" <| Library.hello 0
-
-(**
-Some more info
-
 Samples & documentation
 -----------------------
 
-The library comes with comprehensible documentation. 
-It can include tutorials automatically generated from `*.fsx` files in [the content folder][content]. 
 The API reference is automatically generated from Markdown comments in the library implementation.
-
- * [Tutorial](tutorial.html) contains a further explanation of this sample library.
 
  * [API Reference](reference/index.html) contains automatically generated documentation for all types, modules
    and functions in the library. This includes additional brief samples on using most of the
@@ -55,8 +37,7 @@ the project and submit pull requests. If you're adding a new public API, please 
 consider adding [samples][content] that can be turned into a documentation. You might
 also want to read the [library design notes][readme] to understand how it works.
 
-The library is available under Public Domain license, which allows modification and 
-redistribution for both commercial and non-commercial purposes. For more information see the 
+For more information about the licensing of this library, see the 
 [License file][license] in the GitHub repository. 
 
   [content]: https://github.com/fsprojects/SegaAFSTools/tree/master/docs/content
