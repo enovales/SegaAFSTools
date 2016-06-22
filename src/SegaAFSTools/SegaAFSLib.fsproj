@@ -64,7 +64,6 @@
     <None Include="paket.references" />
     <None Include="paket.template" />
     <Content Include="App.config" />
-    <Compile Include="DGCP.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
