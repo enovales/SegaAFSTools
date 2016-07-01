@@ -1,11 +1,8 @@
 NUGET
   remote: https://www.nuget.org/api/v2
+    CommandLineParser (2.0.275-beta)
     FSharp.Core (4.0.0.1) - redirects: force
-GIT
-  remote: https://github.com/gsscoder/commandline.git
-     (78848d064202840a942ee177a76434d6849f018a)
-      build: build.cmd
-      os: windows
+
 GROUP Build
 NUGET
   remote: https://www.nuget.org/api/v2
