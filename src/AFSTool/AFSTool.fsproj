@@ -54,11 +54,6 @@
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\paket-files\gsscoder\commandline\src\CommandLine\CommandLine.csproj">
-      <Name>CommandLine</Name>
-      <Project>{e1bd3c65-49c3-49e7-baba-c60980cb3f20}</Project>
-      <Private>True</Private>
-    </ProjectReference>
     <ProjectReference Include="..\SegaAFSTools\SegaAFSLib.fsproj">
       <Name>SegaAFSLib</Name>
       <Project>{42eaba35-de38-46c8-8c47-bb362ce94bc9}</Project>
