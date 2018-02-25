@@ -1,11 +1,8 @@
 NUGET
   remote: https://www.nuget.org/api/v2
+    CommandLineParser (2.0.275-beta)
     FSharp.Core (4.0.0.1) - redirects: force
-GIT
-  remote: https://github.com/gsscoder/commandline.git
-     (78848d064202840a942ee177a76434d6849f018a)
-      build: build.cmd
-      os: windows
+
 GROUP Build
 NUGET
   remote: https://www.nuget.org/api/v2
@@ -27,8 +24,8 @@ NUGET
     SourceLink.Fake (1.1)
 GITHUB
   remote: fsharp/FAKE
-    modules/Octokit/Octokit.fsx (c063bf415dac7f7d4df4c37fe76badce76cae3c3)
-      Octokit
+    modules/Octokit/Octokit.fsx (c56456abac6b744c3bb95b217687db19fd19b367)
+      Octokit (>= 0.20)
 GROUP Test
 NUGET
   remote: https://www.nuget.org/api/v2
