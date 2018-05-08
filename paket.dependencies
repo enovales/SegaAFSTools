@@ -2,20 +2,13 @@ source https://nuget.org/api/v2
 
 nuget FSharp.Core redirects: force
 
-//git https://github.com/gsscoder/commandline.git master build: "build.cmd", OS: windows
 nuget CommandLineParser 2.0.275-beta
 
 group Build
   source https://nuget.org/api/v2
   
-  nuget SourceLink.Fake
-  nuget FAKE
-  nuget FSharp.Formatting
-
-  github fsharp/FAKE modules/Octokit/Octokit.fsx
-
 group Test
   source https://nuget.org/api/v2
   
-  nuget NUnit ~> 2
-  nuget NUnit.Runners ~> 2
+  nuget xunit
+  nuget xunit.runner.console
