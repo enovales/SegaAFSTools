@@ -1,21 +1,18 @@
+framework: auto-detect
+
 source https://nuget.org/api/v2
+source https://ci.appveyor.com/nuget/fsharp-formatting
 
-nuget FSharp.Core redirects: force
-
-//git https://github.com/gsscoder/commandline.git master build: "build.cmd", OS: windows
+nuget FSharp.Core
+nuget Argu
 nuget CommandLineParser 2.0.275-beta
 
-group Build
-  source https://nuget.org/api/v2
-  
-  nuget SourceLink.Fake
-  nuget FAKE
-  nuget FSharp.Formatting
+nuget FAKE
+nuget FSharp.Formatting prerelease
 
-  github fsharp/FAKE modules/Octokit/Octokit.fsx
+github fsharp/FAKE modules/Octokit/Octokit.fsx
 
-group Test
-  source https://nuget.org/api/v2
-  
-  nuget NUnit ~> 2
-  nuget NUnit.Runners ~> 2
+nuget Expecto
+nuget Expecto.BenchmarkDotNet
+nuget Expecto.FsCheck
+nuget Expecto.VisualStudio.TestAdapter version_in_path: true
