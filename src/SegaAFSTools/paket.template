@@ -1,4 +1,5 @@
-type project
+type file
+id SegaAFSTools
 title
     SegaAFSTools
 owners
@@ -6,15 +7,17 @@ owners
 authors 
     Erik Novales
 projectUrl
-    http://github.com/enovales/SegaAFSTools
+    https://github.com/enovales/SegaAFSTools
 iconUrl
     https://raw.githubusercontent.com/enovales/SegaAFSTools/master/docs/files/img/logo.png
 licenseUrl
-    http://github.com/enovales/SegaAFSTools/blob/master/LICENSE.txt
+    https://github.com/enovales/SegaAFSTools/blob/master/LICENSE.txt
 requireLicenseAcceptance
     false
+language
+    F#
 copyright
-    Copyright 2015
+    Copyright 2017
 tags
     afs sega archive
 summary
@@ -22,4 +25,5 @@ summary
 description
     This project contains tools and code for working with Sega's AFS archive format. This format was used in a number of their titles.
 
-
+files
+	../../bin/SegaAFSTools ==> lib

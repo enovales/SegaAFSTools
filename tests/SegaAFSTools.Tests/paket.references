@@ -1,4 +1,6 @@
 FSharp.Core
-group Test
-xunit
-xunit.runner.console
+
+Expecto
+Expecto.BenchmarkDotNet
+Expecto.FsCheck
+Expecto.VisualStudio.TestAdapter

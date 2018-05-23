@@ -1,8 +1,12 @@
-module Tests
+namespace SegaAFSTools.Tests
 
-open System
-open Xunit
+open Expecto
+open FsCheck
 
-[<Fact>]
-let ``My test`` () =
-    Assert.True(true)
+module Tests =
+    let config10k = { FsCheckConfig.defaultConfig with maxTest = 10000}
+
+    [<Tests>]
+    let testSimpleTests =
+        testList "SegaAFSTools" []
+

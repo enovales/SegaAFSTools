@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
-    <IsPackable>false</IsPackable>
+    <TargetFramework>net47</TargetFramework>
+    <RootNamespace>SegaAFSTools.Tests</RootNamespace>
+    <AssemblyName>SegaAFSTools.Tests</AssemblyName>
+    <Name>SegaAFSTools.Tests</Name>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Tests.fs" />
-    <Compile Include="Program.fs" />
+    <Compile Include="RunTests.fs" />
+    <None Include="paket.references" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
-    <PackageReference Include="xunit" Version="2.3.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
-    <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
+    <ProjectReference Include="..\..\src\SegaAFSTools\SegaAFSTools.fsproj">
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
