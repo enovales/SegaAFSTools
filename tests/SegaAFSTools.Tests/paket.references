@@ -1,6 +1,8 @@
-FSharp.Core
-
 Expecto
-Expecto.BenchmarkDotNet
 Expecto.FsCheck
 Expecto.VisualStudio.TestAdapter
+FSharp.Core
+dotnet-mono
+Microsoft.NET.Test.Sdk
+YoloDev.Expecto.TestSdk
+altcover
