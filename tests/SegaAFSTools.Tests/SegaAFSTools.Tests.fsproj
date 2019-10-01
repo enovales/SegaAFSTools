@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.0</TargetFrameworks>
     <RootNamespace>SegaAFSTools.Tests</RootNamespace>
     <AssemblyName>SegaAFSTools.Tests</AssemblyName>
     <Name>SegaAFSTools.Tests</Name>
@@ -14,11 +14,11 @@
     <Compile Include="Tests.fs" />
     <Compile Include="RunTests.fs" />
     <None Include="paket.references" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\SegaAFSTools\SegaAFSTools.fsproj">
     </ProjectReference>
   </ItemGroup>
+  <Import Project="..\..\netfx.props" />
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
