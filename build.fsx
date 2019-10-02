@@ -253,7 +253,17 @@ let generateAssemblyInfo _ =
         | Some pr -> pr.Name
         | _ -> "release"
     let getAssemblyInfoAttributes projectName =
-        [
+         AssemblyInfo.Title (projectName) |> ignore
+         AssemblyInfo.Product productName |> ignore
+         AssemblyInfo.Version releaseNotes.AssemblyVersion |> ignore
+
+         AssemblyInfo.Metadata("ReleaseDate", releaseNotes.Date.Value.ToString("o")) |> ignore
+         AssemblyInfo.FileVersion releaseNotes.AssemblyVersion |> ignore
+         AssemblyInfo.InformationalVersion releaseNotes.AssemblyVersion |> ignore
+         AssemblyInfo.Metadata("ReleaseChannel", releaseChannel) |> ignore
+         AssemblyInfo.Metadata("GitHash", Git.Information.getCurrentSHA1(null)) |> ignore
+
+         [
             AssemblyInfo.Title (projectName)
             AssemblyInfo.Product productName
             AssemblyInfo.Version releaseNotes.AssemblyVersion
