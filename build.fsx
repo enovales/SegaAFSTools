@@ -316,6 +316,7 @@ let sourceLinkTest _ =
 let publishToNuget _ =
     isReleaseBranchCheck ()
 
+    printfn "NUGET_KEY is %s" (System.Environment.ExpandEnvironmentVariables("%NUGET_KEY%"))
     Paket.push(fun c ->
             { c with
                 ToolPath = paketToolPath
