@@ -399,7 +399,7 @@ Target.create "Release" ignore
     =?> ("GenerateCoverageReport", not disableCodeCoverage)
     ==> "DotnetPack"
     ==> "SourcelinkTest"
-    ==> "PublishToNuget"
+    //==> "PublishToNuget"
     ==> "GitRelease"
     ==> "GitHubRelease"
     ==> "Release"
