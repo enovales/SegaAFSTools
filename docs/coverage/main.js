@@ -224,7 +224,7 @@ var assemblies = [
   {
     "name": "SegaAFSTools",
     "classes": [
-      { "name": "AFS", "rp": "SegaAFSTools_AFS.htm", "cl": 0, "ucl": 87, "cal": 87, "tl": 193, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 38, "lch": [], "bch": [], "hc": [] },
+      { "name": "AFS", "rp": "SegaAFSTools_AFS.htm", "cl": 0, "ucl": 79, "cal": 79, "tl": 193, "ct": "LineCoverage", "mc": "-", "cb": 0, "tb": 36, "lch": [], "bch": [], "hc": [] },
       { "name": "System.AssemblyVersionInformation", "rp": "SegaAFSTools_AssemblyVersionInformation.htm", "cl": 0, "ucl": 0, "cal": 0, "tl": 0, "ct": "MethodCoverage", "mc": "-", "cb": 0, "tb": 0, "lch": [], "bch": [], "hc": [] },
     ]},
 ];

@@ -2,7 +2,7 @@
 namespace System
 open System.Reflection
 
-[<assembly: AssemblyTitleAttribute("SegaAFSTools")>]
+[<assembly: AssemblyTitleAttribute("SegaAFSTools.Tests")>]
 [<assembly: AssemblyProductAttribute("SegaAFSTools")>]
 [<assembly: AssemblyVersionAttribute("0.2.0")>]
 [<assembly: AssemblyMetadataAttribute("ReleaseDate","2019-10-01T00:00:00.0000000")>]
@@ -13,7 +13,7 @@ open System.Reflection
 do ()
 
 module internal AssemblyVersionInformation =
-    let [<Literal>] AssemblyTitle = "SegaAFSTools"
+    let [<Literal>] AssemblyTitle = "SegaAFSTools.Tests"
     let [<Literal>] AssemblyProduct = "SegaAFSTools"
     let [<Literal>] AssemblyVersion = "0.2.0"
     let [<Literal>] AssemblyMetadata_ReleaseDate = "2019-10-01T00:00:00.0000000"
