@@ -1,2 +1,3 @@
-﻿CommandLineParser
+﻿FSharp.Core
 Microsoft.SourceLink.GitHub
+CommandLineParser
