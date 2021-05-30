@@ -93,7 +93,7 @@ let publishUrl = "https://www.nuget.org"
 
 let docsSiteBaseUrl = sprintf "https://%s.github.io/%s" gitOwner gitRepoName
 
-let disableCodeCoverage = environVarAsBoolOrDefault "DISABLE_COVERAGE" false
+let disableCodeCoverage = environVarAsBoolOrDefault "DISABLE_COVERAGE" true
 
 let githubToken = Environment.environVarOrNone "GITHUB_TOKEN"
 Option.iter(TraceSecrets.register "<GITHUB_TOKEN>" )
