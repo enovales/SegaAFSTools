@@ -4,9 +4,13 @@ storage: none
 nuget FSharp.Core 5.0
 nuget Microsoft.SourceLink.GitHub 1.0.0 copy_local: true
 nuget Expecto 9.0.2
+nuget Expecto.FsCheck 9.0.2
+nuget FsCheck
 nuget YoloDev.Expecto.TestSdk 0.11.1
 nuget Microsoft.NET.Test.Sdk 16.8.0
 nuget altcover ~> 7
+
+nuget CommandLineParser
 
 // [ FAKE GROUP ]
 group Build

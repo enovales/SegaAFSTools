@@ -5,7 +5,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <Title>SegaAFSTools</Title>
-    <Description>SegaAFSTools does the thing!</Description>
+    <Description>A library for working with AFS archives, present in a number of titles released by Sega.</Description>
 
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
@@ -15,7 +15,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Library.fs" />
+    <Compile Include="AFS.fs" />
   </ItemGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>

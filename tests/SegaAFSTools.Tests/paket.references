@@ -1,4 +1,6 @@
 Expecto
+Expecto.FsCheck
+FsCheck
 FSharp.Core
 Microsoft.NET.Test.Sdk
 YoloDev.Expecto.TestSdk

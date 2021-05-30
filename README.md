@@ -1,6 +1,6 @@
 # SegaAFSTools
 
-[Enter useful description for SegaAFSTools]
+This project is a set of libraries and tools for working with AFS archives, present in a number of titles released by Sega.
 
 ---
 
@@ -162,4 +162,9 @@ macOS/Linux Environment Variable:
 RELEASE_VERSION=0.2.0 ./build.sh Release
 ```
 
+---
+
+## Maintainers
+
+Maintained by [@enovales](https://github.com/enovales).
 
