@@ -102,7 +102,9 @@ type ExtractConfiguration() =
 let private extractSingleArchive(destinationPath: string, makeDirectory: bool)(archive: string) = 
     let extractPath = 
         if makeDirectory then
-            Path.Combine(destinationPath, Path.GetFileNameWithoutExtension(archive))
+            let fileName = Path.GetFileNameWithoutExtension(archive)
+            let fileName = if isNull fileName then Path.GetFileName(archive) else fileName
+            Path.Combine(destinationPath, fileName)
         else
             destinationPath
 
