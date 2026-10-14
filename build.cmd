@@ -1,4 +1,7 @@
-echo Restoring dotnet tools...
-dotnet tool restore
+@echo off
 
-dotnet fake build -t %*
+# Build the solution
+dotnet build SegaAFSTools.sln --configuration Release
+
+# Run tests (Expecto tests need to be executed directly)
+dotnet run --project tests/SegaAFSTools.Tests/SegaAFSTools.Tests.fsproj --configuration Release
