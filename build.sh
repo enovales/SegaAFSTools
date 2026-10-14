@@ -3,7 +3,8 @@
 set -eu
 set -o pipefail
 
-echo "Restoring dotnet tools..."
-dotnet tool restore
+# Build the solution
+dotnet build SegaAFSTools.sln --configuration Release
 
-PAKET_SKIP_RESTORE_TARGETS=true FAKE_DETAILED_ERRORS=true dotnet fake build -t "$@"
+# Run tests
+dotnet test tests/SegaAFSTools.Tests/SegaAFSTools.Tests.fsproj --configuration Release
